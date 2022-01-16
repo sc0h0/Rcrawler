@@ -438,7 +438,7 @@ Rcrawler <- function(Website, no_cores,no_conn, MaxDepth, DIR, RequestsDelay=0,O
   IndexErrPages<-c(200)
 
   #create repository
-  tryCatch(curdate<-format(Sys.time(), "%d%H%M"),error=function(e) curdate<-sample(1000:9999, 1) )
+  tryCatch(curdate<-format(Sys.time(), "%Y-%m-%d--%H-%M"),error=function(e) curdate<-sample(1000:9999, 1) )
   if(saveOnDisk){
     foldename<-paste(domain,"-",curdate,sep = "")
     path<-paste(DIR,"/", foldename ,sep = "")
