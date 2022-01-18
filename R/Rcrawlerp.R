@@ -442,7 +442,8 @@ Rcrawler <- function(Website, no_cores,no_conn, MaxDepth, DIR, RequestsDelay=0,O
   if(saveOnDisk){
     foldename<-paste(domain,"-",curdate,sep = "")
     path<-paste(DIR,"/", foldename ,sep = "")
-    cat(curdate,  file = paste(DIR,"/","last_log_date.txt", sep = "") , sep="")
+    writeLines(curdate, paste(DIR,"/","last_log_date.txt", sep = ""))
+    #cat(curdate,  file = paste(DIR,"/","last_log_date.txt", sep = "") , sep="")
     dir.create(path, recursive = TRUE, mode = "0777")
   }
   #if(Backup) {
