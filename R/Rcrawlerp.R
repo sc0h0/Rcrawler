@@ -989,5 +989,7 @@ Rcrawler <- function(Website, no_cores,no_conn, MaxDepth, DIR, RequestsDelay=0,O
     cat("+ Network nodes are stored in a variable named : NetwIndex \n")
     cat("+ Network eadges are stored in a variable named : NetwEdges \n")
   }
+           
+closeAllConnections()
 
 }
